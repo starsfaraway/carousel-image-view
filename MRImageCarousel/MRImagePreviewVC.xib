@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MRImagePreviewVC" customModule="MRImageCarousel" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="E6N-aZ-QVe" id="Ppr-iG-K4r"/>
+                <outlet property="scrollView" destination="CAl-wj-Zx7" id="hUt-eu-qX7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" minimumZoomScale="0.10000000000000001" maximumZoomScale="50" translatesAutoresizingMaskIntoConstraints="NO" id="CAl-wj-Zx7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E6N-aZ-QVe">
+                            <rect key="frame" x="40" y="100" width="295" height="467"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="E6N-aZ-QVe" firstAttribute="centerX" secondItem="CAl-wj-Zx7" secondAttribute="centerX" id="2PZ-qq-5RA"/>
+                        <constraint firstItem="E6N-aZ-QVe" firstAttribute="centerY" secondItem="CAl-wj-Zx7" secondAttribute="centerY" id="AFO-a5-6cm"/>
+                        <constraint firstItem="E6N-aZ-QVe" firstAttribute="top" secondItem="CAl-wj-Zx7" secondAttribute="top" constant="100" id="O2O-SN-wwy"/>
+                        <constraint firstItem="E6N-aZ-QVe" firstAttribute="leading" secondItem="CAl-wj-Zx7" secondAttribute="leading" constant="40" id="TuR-KK-aKL"/>
+                        <constraint firstAttribute="trailing" secondItem="E6N-aZ-QVe" secondAttribute="trailing" constant="40" id="bbU-iI-DMp"/>
+                        <constraint firstAttribute="bottom" secondItem="E6N-aZ-QVe" secondAttribute="bottom" constant="100" id="r7O-vx-tRb"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aid-EP-1FD">
+                    <rect key="frame" x="8" y="36" width="359" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="m25-Pa-bZW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="18"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="doneButton:" destination="-1" eventType="touchUpInside" id="raL-sd-NOm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Aid-EP-1FD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="54t-SN-GzD"/>
+                <constraint firstItem="Aid-EP-1FD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="LXc-0j-bVn"/>
+                <constraint firstItem="CAl-wj-Zx7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TIf-Hb-Y1M"/>
+                <constraint firstAttribute="bottom" secondItem="CAl-wj-Zx7" secondAttribute="bottom" id="dSj-ap-Inw"/>
+                <constraint firstItem="CAl-wj-Zx7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mKY-VS-lf0"/>
+                <constraint firstAttribute="trailing" secondItem="CAl-wj-Zx7" secondAttribute="trailing" id="tZ6-x3-hht"/>
+                <constraint firstAttribute="trailing" secondItem="Aid-EP-1FD" secondAttribute="trailing" constant="8" id="tqH-oh-HPt"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
